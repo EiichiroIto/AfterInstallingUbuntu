@@ -1,0 +1,2 @@
+# AfteIinstallUbuntu
+Ubuntuをインストールした後にやることの備忘録

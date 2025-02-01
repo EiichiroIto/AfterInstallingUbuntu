@@ -5,6 +5,9 @@ Ubuntuをインストールした後にやることの備忘録
 ```bash
 $ LANG=C xdg-user-dirs-gtk-update
 ```
+### バックアップを戻す
+user-dirs.dirs
+user-dirs.locale
 
 ## CapsLock を Control にする
 /etc/default/keyboard の内容を以下に変更する

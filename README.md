@@ -12,15 +12,90 @@ $ LANG=C xdg-user-dirs-gtk-update
 XKBOPTIONS="ctrl:nocaps"
 ```
 
-## sudoerの追加
+## ナチュラルスクロールにする
+/usr/share/X11/xorg.conf.d/40-libinput.conf の内容を一部修正する
+```
+[Identifier "libinput pointer catchall"]
+ Option "NaturalScrolling" "True"
+```
+および
+```
+[Identifier "libinput touchpad catchall"]
+ Option "NaturalScrolling" "True"
+ Option "Tapping" "on"
+```
+
+## sudoerを追加する
 /etc/sudoers.d/20-admin を作成して以下の内容にする
 ```
 ユーザー名 ALL=(ALL:ALL) NOPASSWD:ALL
 ```
 
-## i3のインストール
+## i3 をインストールする
 ```
-sudo apt install i3
+sudo apt install i3 i3status
+```
+### バックアップを戻す
+.confi/i3/
+.i3status.conf
+
+## 日本語関係＆mozc をインストールする
+```
+sudo apt install language-pack-ja-base language-pack-ja fonts-noto-cjk-extra fcitx5-mozc
+```
+### バックアップを戻す
+~/.fonts
+```
+fc-cache -fv
 ```
 
+## Firefox & Thunderbird をインストールする
+```
+sudo apt install firefox thunderbird
+```
+### バックアップを戻す
+.thunderbird/
+
+## syncthing をインストールする
+```
+sudo apt install syncthing
+```
+### バックアップを戻す
+~/.config/syncthing/
+### /etc/sysctl.conf の最後に以下を追加する
+```
+fs.inotify.max_user_watches=204800
+```
+### サービスを登録・実行する
+```
+sudo systemctl start syncthing@itoh.service
+sudo systemctl enable syncthing@itoh.service
+```
+
+### libreoffice をインストールする
+```
+sudo apt install libreoffice libreoffice-l10n-ja libreoffice-help-ja
+```
+
+## その他をインストールする
+```
+sudo apt install feh ntpdate rsnapshot kmix flameshot
+```
+
+## バックアップを元にもどす
+.emacs.d/init.el
+.fehbg
+.bashrc
+~/.ssh
+~/bin
+~/working
+~/Research
+~/Dropbox
+~/Downloads
+~/Music
+~/landisk
+~/Pharo
+~/Pictures
+~/Videos
+/etc/rsnapshot.conf
 

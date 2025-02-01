@@ -71,6 +71,12 @@ fs.inotify.max_user_watches=204800
 sudo systemctl start syncthing@ユーザー名.service
 sudo systemctl enable syncthing@ユーザー名.service
 ```
+## emacs をインストールする
+```
+sudo apt install emacs emacs-mozc
+```
+### バックアップを戻す
+.emacs.d/init.el
 
 ### libreoffice をインストールする
 ```
@@ -79,14 +85,14 @@ sudo apt install libreoffice libreoffice-l10n-ja libreoffice-help-ja
 
 ## その他をインストールする
 ```
-sudo apt install feh ntpdate rsnapshot kmix flameshot emacs emacs-mozc
+sudo apt install feh ntpdate rsnapshot kmix flameshot openssh-server
 ```
 
 ## バックアップを元にもどす
-.emacs.d/init.el
 .fehbg
 .bashrc
 ~/.ssh
+/etc/rsnapshot.conf
 ~/bin
 ~/working
 ~/Research
@@ -97,5 +103,4 @@ sudo apt install feh ntpdate rsnapshot kmix flameshot emacs emacs-mozc
 ~/Pharo
 ~/Pictures
 ~/Videos
-/etc/rsnapshot.conf
 

@@ -79,7 +79,7 @@ sudo apt install libreoffice libreoffice-l10n-ja libreoffice-help-ja
 
 ## その他をインストールする
 ```
-sudo apt install feh ntpdate rsnapshot kmix flameshot
+sudo apt install feh ntpdate rsnapshot kmix flameshot emacs emacs-mozc
 ```
 
 ## バックアップを元にもどす

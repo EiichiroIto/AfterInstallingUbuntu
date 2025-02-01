@@ -68,8 +68,8 @@ fs.inotify.max_user_watches=204800
 ```
 ### サービスを登録・実行する
 ```
-sudo systemctl start syncthing@itoh.service
-sudo systemctl enable syncthing@itoh.service
+sudo systemctl start syncthing@ユーザー名.service
+sudo systemctl enable syncthing@ユーザー名.service
 ```
 
 ### libreoffice をインストールする

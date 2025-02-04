@@ -5,9 +5,12 @@ Ubuntuをインストールした後にやることの備忘録
 ```bash
 $ LANG=C xdg-user-dirs-gtk-update
 ```
-### バックアップを戻す
-user-dirs.dirs
-user-dirs.locale
+
+## Firefox をインストールする
+```
+sudo apt install firefox
+```
+### do login
 
 ## CapsLock を Control にする
 /etc/default/keyboard の内容を以下に変更する
@@ -52,28 +55,13 @@ sudo apt install language-pack-ja-base language-pack-ja fonts-noto-cjk-extra fci
 fc-cache -fv
 ```
 
-## Firefox & Thunderbird をインストールする
+## Thunderbird をインストールする
 ```
 sudo apt install firefox thunderbird
 ```
 ### バックアップを戻す
 .thunderbird/
 
-## syncthing をインストールする
-```
-sudo apt install syncthing
-```
-### バックアップを戻す
-~/.config/syncthing/
-### /etc/sysctl.conf の最後に以下を追加する
-```
-fs.inotify.max_user_watches=204800
-```
-### サービスを登録・実行する
-```
-sudo systemctl start syncthing@ユーザー名.service
-sudo systemctl enable syncthing@ユーザー名.service
-```
 ## emacs をインストールする
 ```
 sudo apt install emacs emacs-mozc
@@ -107,3 +95,18 @@ sudo apt install feh ntpdate rsnapshot kmix flameshot openssh-server
 ~/Pictures
 ~/Videos
 
+## syncthing をインストールする
+```
+sudo apt install syncthing
+```
+### バックアップを戻す
+~/.config/syncthing/
+### /etc/sysctl.conf の最後に以下を追加する
+```
+fs.inotify.max_user_watches=204800
+```
+### サービスを登録・実行する
+```
+sudo systemctl start syncthing@ユーザー名.service
+sudo systemctl enable syncthing@ユーザー名.service
+```

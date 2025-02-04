@@ -57,7 +57,7 @@ fc-cache -fv
 
 ## Thunderbird をインストールする
 ```
-sudo apt install firefox thunderbird
+sudo apt install thunderbird
 ```
 ### バックアップを戻す
 .thunderbird/

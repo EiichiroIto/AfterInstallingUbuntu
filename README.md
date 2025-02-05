@@ -47,7 +47,9 @@ sudo apt install i3 i3status
 
 ## 日本語関係＆mozc をインストールする
 ```
-sudo apt install language-pack-ja-base language-pack-ja fonts-noto-cjk-extra fcitx5-mozc
+sudo apt install language-pack-ja-base language-pack-ja
+sudo apt install fonts-noto-cjk-extra fonts-ipafont fonts-ipaexfont
+sudo apt install fcitx5-mozc
 ```
 ### バックアップを戻す
 ~/.fonts
